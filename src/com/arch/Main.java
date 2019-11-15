@@ -12,6 +12,6 @@ public class Main {
         StudentPersistance studentPersistance = new StudentPersistance();
         studentPersistance.saveStudentToArrayList(new Student("A123", "John", new Date(), 3));
         StudentHTMLPresenter presenter = new StudentHTMLPresenter();
-        System.out.println(presenter.viewStudentDetails("A123", studentPersistance));
+        System.out.println(presenter.viewStudentDetails("A123", 1, studentPersistance));
     }
 }
