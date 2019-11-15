@@ -1,8 +1,6 @@
 package com.arch.dependency_rule.entity;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Student {
 
@@ -19,6 +17,8 @@ public class Student {
     }
 
     static Map<String, Student> students = new HashMap<>();
+
+    static List<Student> studentList = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -58,6 +58,20 @@ public class Student {
 
     public static void saveStudentToHashTable(Student student){
         students.put(student.id, student);
+    }
+
+    public static Student getStudentFromArrayList(String id){
+        Student student = null;
+        for (Student st : studentList){
+            if(st.getId().equals(id))
+                student = st;
+        }
+
+        return student;
+    }
+
+    public static void saveStudentToArrayList(Student student){
+        studentList.add(student);
     }
 
 
