@@ -60,16 +60,28 @@ public class Student {
         students.put(student.id, student);
     }
 
-    @Override
-    public String toString() {
-        return "<html><body>" +
-                "{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", enrolledDate=" + enrolledDate +
-                ", grade=" + grade +
-                '}' +
-                "</html></body>";
+
+    public String toString(int type) {
+        if(type==1){
+            return "<html><body>" +
+                    "{" +
+                    "id='" + id + '\'' +
+                    ", name='" + name + '\'' +
+                    ", enrolledDate=" + enrolledDate +
+                    ", grade=" + grade +
+                    '}' +
+                    "</html></body>";
+        }
+        else if(type==2){
+            return "{" +
+                    "id='" + id + '\'' +
+                    ", name='" + name + '\'' +
+                    ", enrolledDate=" + enrolledDate +
+                    ", grade=" + grade +
+                    "}";
+        }
+        else return "";
+
     }
 
 }
