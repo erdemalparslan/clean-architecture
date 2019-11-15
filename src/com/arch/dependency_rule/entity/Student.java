@@ -60,16 +60,5 @@ public class Student {
         students.put(student.id, student);
     }
 
-    @Override
-    public String toString() {
-        return "<html><body>" +
-                "{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", enrolledDate=" + enrolledDate +
-                ", grade=" + grade +
-                '}' +
-                "</html></body>";
-    }
 
 }
