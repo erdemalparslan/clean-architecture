@@ -16,10 +16,6 @@ public class Student {
         this.grade = grade;
     }
 
-    static Map<String, Student> students = new HashMap<>();
-
-    static List<Student> studentList = new ArrayList<>();
-
     public String getId() {
         return id;
     }
@@ -52,27 +48,7 @@ public class Student {
         this.grade = grade;
     }
 
-    public static Student getStudentFromHashTable(String id){
-        return students.get(id);
-    }
 
-    public static void saveStudentToHashTable(Student student){
-        students.put(student.id, student);
-    }
-
-    public static Student getStudentFromArrayList(String id){
-        Student student = null;
-        for (Student st : studentList){
-            if(st.getId().equals(id))
-                student = st;
-        }
-
-        return student;
-    }
-
-    public static void saveStudentToArrayList(Student student){
-        studentList.add(student);
-    }
 
 
 }
