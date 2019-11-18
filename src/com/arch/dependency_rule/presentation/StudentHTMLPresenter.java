@@ -1,6 +1,7 @@
 package com.arch.dependency_rule.presentation;
 
-import com.arch.dependency_rule.application.StudentVerificationInterface;
+import com.arch.dependency_rule.application.StudentIdVerificationInterface;
+import com.arch.dependency_rule.application.StudentNameVerificationInterface;
 import com.arch.dependency_rule.application.VerificationServiceFactory;
 import com.arch.dependency_rule.drivers.StudentPersistanceInterface;
 import com.arch.dependency_rule.entity.Student;
@@ -29,9 +30,11 @@ public class StudentHTMLPresenter {
     public void createStudent(String id, String name, int grade, StudentPersistanceInterface studentPersistance){
         Student student = new Student(id, name, new Date(), grade);
         VerificationServiceFactoryInterface verificationServiceFactory = new VerificationServiceFactory();
-        StudentVerificationInterface verificationService = verificationServiceFactory.makeService(grade);
+        StudentIdVerificationInterface idVerificationInterface = verificationServiceFactory.makeIdService(grade);
+        StudentNameVerificationInterface nameVerificationInterface = verificationServiceFactory.makeNameService();
 
-        if (verificationService.verifyId(student) && verificationService.verifyName(student))
+
+        if (idVerificationInterface.verifyId(student) && nameVerificationInterface.verifyName(student))
             studentPersistance.save(student);
     }
 }

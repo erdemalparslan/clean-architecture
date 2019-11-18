@@ -1,8 +1,9 @@
 package com.arch.dependency_rule.presentation;
 
-import com.arch.dependency_rule.application.StudentVerificationInterface;
-import com.arch.dependency_rule.entity.Student;
+import com.arch.dependency_rule.application.StudentIdVerificationInterface;
+import com.arch.dependency_rule.application.StudentNameVerificationInterface;
 
 public interface VerificationServiceFactoryInterface {
-    StudentVerificationInterface makeService(int grade);
+    StudentIdVerificationInterface makeIdService(int grade);
+    StudentNameVerificationInterface makeNameService();
 }
