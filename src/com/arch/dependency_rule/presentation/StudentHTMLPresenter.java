@@ -31,7 +31,7 @@ public class StudentHTMLPresenter {
         VerificationServiceFactoryInterface verificationServiceFactory = new VerificationServiceFactory();
         StudentVerificationInterface verificationService = verificationServiceFactory.makeService(grade);
 
-        if (verificationService.verifyId(student))
+        if (verificationService.verifyId(student) && verificationService.verifyName(student))
             studentPersistance.save(student);
     }
 }

@@ -7,4 +7,9 @@ public class LowGradeStudentVerificationService implements StudentVerificationIn
     public boolean verifyId(Student student) {
         return student.getId().startsWith("A");
     }
+
+    @Override
+    public boolean verifyName(Student student) {
+        return student.getName().length()>=3;
+    }
 }

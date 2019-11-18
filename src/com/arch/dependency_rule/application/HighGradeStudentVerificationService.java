@@ -7,4 +7,9 @@ public class HighGradeStudentVerificationService implements StudentVerificationI
     public boolean verifyId(Student student) {
         return student.getId().startsWith("Z");
     }
+
+    @Override
+    public boolean verifyName(Student student) {
+        return student.getName().length()>=3;
+    }
 }
