@@ -5,7 +5,7 @@ import com.arch.dependency_rule.entity.Student;
 
 public class StudentHTMLPresenter {
     public String viewStudentDetails(String id, StudentPersistance studentPersistance){
-        Student student = studentPersistance.getStudentFromArrayList(id);
+        Student student = studentPersistance.getStudentFromOracle(id);
         return  "<html><body>" +
                 "{" +
                 "id='" + id + '\'' +

@@ -13,15 +13,15 @@ public class StudentPersistance {
 
     List<Student> studentList = new ArrayList<>();
 
-    public Student getStudentFromHashTable(String id){
+    public Student getStudentFromMySql(String id){
         return students.get(id);
     }
 
-    public void saveStudentToHashTable(Student student){
+    public void saveStudentToMySql(Student student){
         students.put(student.getId(), student);
     }
 
-    public Student getStudentFromArrayList(String id){
+    public Student getStudentFromOracle(String id){
         Student student = null;
         for (Student st : studentList){
             if(st.getId().equals(id))
@@ -31,7 +31,7 @@ public class StudentPersistance {
         return student;
     }
 
-    public void saveStudentToArrayList(Student student){
+    public void saveStudentToOracle(Student student){
         studentList.add(student);
     }
 }
