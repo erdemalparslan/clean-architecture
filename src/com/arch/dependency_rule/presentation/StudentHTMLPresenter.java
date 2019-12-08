@@ -7,10 +7,10 @@ public class StudentHTMLPresenter {
     public String viewStudentDetails(String id, int persistance_type, StudentPersistance studentPersistance){
         Student student = null;
         if(persistance_type==1){
-            student = studentPersistance.getStudentFromArrayList(id);
+            student = studentPersistance.getStudentFromOracle(id);
         }
         else if(persistance_type==2){
-            student = studentPersistance.getStudentFromHashTable(id);
+            student = studentPersistance.getStudentFromMySql(id);
         }
 
         if (student != null) {
