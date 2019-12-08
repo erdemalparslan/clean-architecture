@@ -4,7 +4,7 @@ import com.arch.dependency_rule.entity.Student;
 
 public class StudentHTMLPresenter {
     public String viewStudentDetails(String id){
-        Student student = Student.getStudentFromHashTable(id);
+        Student student = Student.getStudentFromMySql(id);
         return  student.toString(2);
     }
 }

@@ -52,11 +52,11 @@ public class Student {
         this.grade = grade;
     }
 
-    public static Student getStudentFromHashTable(String id){
+    public static Student getStudentFromMySql(String id){
         return students.get(id);
     }
 
-    public static void saveStudentToHashTable(Student student){
+    public static void saveStudentToMySql(Student student){
         students.put(student.id, student);
     }
 
