@@ -52,15 +52,15 @@ public class Student {
         this.grade = grade;
     }
 
-    public static Student getStudentFromHashTable(String id){
+    public static Student getStudentFromMySql(String id){
         return students.get(id);
     }
 
-    public static void saveStudentToHashTable(Student student){
+    public static void saveStudentToMySql(Student student){
         students.put(student.id, student);
     }
 
-    public static Student getStudentFromArrayList(String id){
+    public static Student getStudentFromOracle(String id){
         Student student = null;
         for (Student st : studentList){
             if(st.getId().equals(id))
@@ -70,7 +70,7 @@ public class Student {
         return student;
     }
 
-    public static void saveStudentToArrayList(Student student){
+    public static void saveStudentToOracle(Student student){
         studentList.add(student);
     }
 

@@ -8,7 +8,7 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-        Student.saveStudentToArrayList(new Student("A123", "John", new Date(), 3));
+        Student.saveStudentToOracle(new Student("A123", "John", new Date(), 3));
         StudentHTMLPresenter presenter = new StudentHTMLPresenter();
         System.out.println(presenter.viewStudentDetails("A123"));
     }
