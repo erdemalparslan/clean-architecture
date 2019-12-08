@@ -2,7 +2,7 @@ package com.arch.dependency_rule.drivers;
 
 import com.arch.dependency_rule.entity.Student;
 
-public class StudentArrayListPersistance implements StudentPersistanceInterface {
+public class StudentOraclePersistance implements StudentPersistanceInterface {
     @Override
     public void save(Student student) {
         studentList.add(student);
